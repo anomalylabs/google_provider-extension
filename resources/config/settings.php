@@ -14,11 +14,25 @@ return [
         'type'     => 'anomaly.field_type.encrypted',
     ],
     'scope'             => [
-        'bind' => 'services.google.scope',
-        'type' => 'anomaly.field_type.tags',
+        'bind'   => 'services.google.scope',
+        'type'   => 'anomaly.field_type.tags',
+        'config' => [
+            'default_value' => [
+                'openid',
+                'profile',
+                'email',
+            ],
+        ],
     ],
     'application_scope' => [
-        'bind' => 'services.google.application_scope',
-        'type' => 'anomaly.field_type.tags',
+        'bind'   => 'services.google.application_scope',
+        'type'   => 'anomaly.field_type.tags',
+        'config' => [
+            'default_value' => [
+                'openid',
+                'profile',
+                'email',
+            ],
+        ],
     ],
 ];
